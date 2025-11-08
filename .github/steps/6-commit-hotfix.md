@@ -4,48 +4,51 @@
   Define terms and link to docs.github.com.
 -->
 
-## Step 6: Commit a hotfix to the release
+## Step 6: 提交一个热修复（hotfix）
 
-_Almost there :heart:_
+_离完成就差一步啦 :heart:_
+ 
+你可能注意到了，我并没有删除那个分支 —— 这是**有意为之**的。
 
-Notice that I didn't delete the branch? That's intentional.
+在实际项目中，发版后发现问题的情况并不少见。为了能及时修复，我们通常会在同一个发布分支上直接提交补丁，而不是重新开始。
 
-Sometimes mistakes can happen with releases, and we'll want to be able to correct them on the same branch.
+现在发布已完成，记得我们前面说过，我故意引入了一个 bug：本想只把文字颜色改为绿色，结果整个游戏背景都被改了。
 
-Now that your release is finalized, we have a confession to make. Somewhere in our recent update, I made a mistake and introduced a bug. Instead of changing the text colors to green, we changed the whole game background.
-
-_Tip: Sometimes GitHub Pages takes a few minutes to update. Your page might not immediately show the recent updates you've made._
+_注意: GitHub Pages 更新有时需要几分钟，页面可能不会立刻显示你的最新改动。_
 
 ![image](https://user-images.githubusercontent.com/13326548/48045461-487dd800-e145-11e8-843c-b91a82213eb8.png)
 
-"Hotfixes", or a quick fix to address a bug in software, are a normal part of development. Oftentimes you'll see application updates whose only description is "bug fixes".
+这种快速修复软件中 bug 的操作，称为热修复（hotfix）。它是软件开发中的常规流程，你可能在其他App更新日志中经常见过类似描述：“修复了一些已知问题” —— 这通常就是热修复。
 
-When bugs come up after you release a version, you'll need to address them. We've already created a `hotfix-v1.0.1` and `fix-game-background` branches for you to start.
+我们已为你创建好两个分支：
 
-We'll submit a hotfix by creating and merging the pull request.
+- `hotfix-v1.0.1`
+- `fix-game-background`
 
-### :keyboard: Activity: Create and merge the hotfix pull request
+接下来，我们将通过创建并合并 Pull Request 完成热修复：先合并到热修复分支，再同步到 main。
 
-1. Open a pull request with `hotfix-v1.0.1` as the `base` branch, and `fix-game-background` as the `compare` branch.
-1. Fill in the pull request template to describe your changes. You can set the pull request title to "Hotfix for broken game style". You can include a detailed pull request body, an example is below:
+### :keyboard: 实操环节：创建并合并hotfix拉取请求
+
+1. 创建一个新的拉取请求，选择 `base: hotfix-v1.0.1`，对比分支为 `compare: fix-game-background`。
+2. 填写标题与描述。可以将标题设为 **Hotfix for broken game style**，描述如下：
    ```
    ## Description:
    - Fixed bug, set game background back to black
    ```
-1. Review the changes and click **Create pull request**.
-1. We want to merge this into our hotfix branch now so click **Merge pull request**.
+3. 检查修改内容，点击 **Create pull request**。
+4. 点击 **Merge pull request**（合并拉取请求）将修复合并进 hotfix 分支。
 
-Now we want these changes merged into `main` as well so let's create and merge a pull request with our hotfix to `main`.
+现在，我们还需要把这次修复同步到主分支 `main`。
 
-### :keyboard: Activity: Create the release pull request
+### :keyboard: 实操环节: 将热修复合并到主分支
 
-1. Open a pull request with `main` as the `base` branch, and `hotfix-v1.0.1` as the `compare` branch.
-1. Ensure the title of your pull request is "Hotfix v1.0.1".
-1. Include a detailed pull request body, an example is below:
-   ```
+1. 创建一个新的拉取请求，选择 `base: main`，对比分支为 `compare: hotfix-v1.0.1`。
+2. 设置标题为 **Hotfix v1.0.1**。
+   你可以参考以下示例描述：
+   ```markdown
    ## Description:
    - Fixed bug introduced in last production release - set game background back to black
    ```
-1. Review the changes and click **Create pull request**.
-1. Click **Merge pull request**.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+3. 检查修改内容，点击 **Create pull request**。
+4. 点击 **Merge pull request** 完成合并。
+5. 等待约 20 秒后刷新此页面，[GitHub Actions](https://docs.github.com/en/actions) 会自动检测并进入下一步。

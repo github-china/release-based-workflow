@@ -4,33 +4,35 @@
   Define terms and link to docs.github.com.
 -->
 
-## Step 3: Open a release pull request
+## Step 3: 创建发布拉取请求（Release PR）
 
-_Nice work adding a new feature :smile:_
+_干得漂亮！你刚刚成功添加了一个新功能（修改背景色） :smile:_
 
-### Release branches and `main`
+### 发布分支与 `main` 分支的关系
 
-You should open a pull request between your release branch and main as early as possible. It might be open for a long time, and that's okay.
+在版本发布流程中，**应该尽早创建发布分支与主分支（`main`）之间的拉取请求**。即使这个PR会保持打开状态一段时间也没关系。
 
-In general, the pull request description can include:
+一般来说，一个发布拉取请求（Release PR）应包含以下信息：
 
-- A [reference to an issue](https://docs.github.com/en/articles/basic-writing-and-formatting-syntax/#mentioning-people-and-teams) that the pull request addresses.
-- A description of the changes proposed in the pull request.
-- [@mentions](https://docs.github.com/en/articles/basic-writing-and-formatting-syntax/#mentioning-people-and-teams) of the person or team responsible for reviewing proposed changes.
+- 关联的 [Issue 引用](https://docs.github.com/en/articles/basic-writing-and-formatting-syntax/#mentioning-people-and-teams)，说明这个 PR 解决了哪些问题。
+- 对本次提交的详细描述，说明包含了哪些变更。
+- 使用 [@提及](https://docs.github.com/en/articles/basic-writing-and-formatting-syntax/#mentioning-people-and-teams) 通知负责审查的人员或团队。
 
-To expedite the creation of this pull request, I've added a pull request template to the repository. When you create a pull request, default text will automatically be displayed. This should help you identify and fill out all the necessary information. If you don't want to use the template content, just remove the text from the pull request and replace it with your pull request message.
+为方便操作，我已经在仓库中添加了 **拉取请求模板**。
+创建 PR 时，系统会自动填充一段默认文本，帮助你确认和填写关键信息。
+如果不想使用模板内容，可以直接清空默认文本并写入自己的说明。
 
-### :keyboard: Activity: Open a release pull request
+### :keyboard: 实操环节：创建发布拉取请求
 
-Let's make a new pull request comparing the `release-v1.0` branch to the `main` branch.
+接下来，我们将创建一个用于发布的拉取请求， 对比 `release-v1.0` 分支与 `main` 分支的差异。
 
-1. Open a **new pull request** with `base: main` and `compare: release-v1.0`.
-1. Ensure the title of your pull request is "Release v1.0".
-1. Include a detailed pull request body, an example is below:
+1. 创建一个**新的拉取请求（Pull Request）**，`base: main` 以及 `compare: release-v1.0`。
+2. 将标题填写为：`Release v1.0`。
+3. 在正文中详细描述更新内容，例如：
    ```
-   ## Description:
-   - Changed page background color to black.
-   - Changed game text color to green.
+   ## 说明:
+   - 将页面背景色修改为黑色
+   - 将游戏文字颜色修改为绿色
    ```
-1. Click **Create pull request**.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+4. 点击 **Create pull request**（创建拉取请求）。
+5. 等待约 20 秒后刷新此页面，[GitHub Actions](https://docs.github.com/en/actions) 会自动检测更新并进入下一步。

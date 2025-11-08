@@ -9,9 +9,14 @@
   Add your open source license, GitHub uses the MIT license.
 -->
 
-# Create a release based workflow
+[English](https://github.com/skills/release-based-workflow) | 中文
 
-_Create a release based workflow that is built on the foundations of the GitHub flow._
+> 本课程翻译自 Github Skills，全部课程请点击 [这里查看](https://www.github-zh.com/getting-started)
+
+# 创建一个基于发布的工作流程
+
+_掌握以 GitHub Flow 为基础的发布型工作流程（release based workflow）。_
+
 
 </header>
 
@@ -23,27 +28,31 @@ _Create a release based workflow that is built on the foundations of the GitHub 
 
 ## Welcome
 
-Create a release based workflow that is built on the foundations of the [GitHub flow](https://guides.github.com/introduction/flow/). When your team uses a release-based workflow, GitHub makes it easy to collaborate with deployable iterations of your project that you can package and make available for a wider audience to download and use.
+本课程我们将学习基于发布的（release-based）工作流程，该流程建立在 [GitHub Flow](https://guides.github.com/introduction/flow/) 的基础之上。
+当团队采用这种工作流程时，GitHub 能让你更方便地协作、打包代码，并把项目的稳定版本发布给更多用户下载和使用。
 
-GitHub releases allow your team to package and provide software to your users based on a specific point in the history of your project.
+> [GitHub Flow](https://guides.github.com/introduction/flow/) 是一种轻量级的、基于分支的开发工作流程，特别适用于持续部署的团队。
+它通过要求团队创建新分支进行开发、提交代码、发起 Pull Request（用于代码评审和讨论），以及在合并到主分支后立即部署，从而实现持续且高速地发布和部署软件。
 
-- **Who is this for**: Developers, DevOps Engineers, IT Operations, managers, and teams.
-- **What you'll learn**: How to follow a release-based workflow.
-- **What you'll build**: You will create tags, releases, and release notes.
-- **Prerequisites**: If you need to learn about branches, commits, and pull requests, take [Introduction to GitHub](https://github.com/skills/introduction-to-github) first.
-- **How long**: This course takes less than 1 hour to complete.
+GitHub 的 “发布（release）” 功能，可以让你的团队基于项目历史中的某个节点，将软件打包并提供给用户使用。
 
-In this course, you will:
+- **适合人群**：开发者、DevOps 工程师、运维人员、管理者和开发团队。
+- **你将学到**：如何按照发布为核心的工作流程开展项目。
+- **你将构建**：创建标签（tag）、发布版本（release）和发布说明（release notes）。
+- **学习前提**：如果你还不了解分支、提交和Pull Request，建议先学习 [GitHub 入门课程](https://github.com/github-china/introduction-to-github)。
+- **课程时长**：不到 1 小时。
 
-1. Create a beta release
-2. Add a feature to a release
-3. Open a release pull request
-4. Add release notes and merge
-5. Finalize a release
-6. Commit a hotfix
-7. Create a hotfix release
+课程内容如下：
 
-### How to start this course
+1. 创建 beta 测试版本
+2. 向版本中添加新功能
+3. 创建用于发布的拉取请求（Pull Request）
+4. 添加发布说明并合并代码
+5. 发布正式版本
+6. 提交紧急修复（hotfix）
+7. 创建修复后的发布版本
+
+### 如何开始课程
 
 <!-- For start course, run in JavaScript:
 'https://github.com/new?' + new URLSearchParams({
@@ -56,14 +65,14 @@ In this course, you will:
 }).toString()
 -->
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=release-based-workflow&owner=%40me&name=skills-release-based-workflow&description=My+clone+repository&visibility=public)
+[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=github-china&template_name=release-based-workflow&owner=%40me&name=skills-release-based-workflow&description=My+clone+repository&visibility=public)
 
-1. Right-click **Start course** and open the link in a new tab.
-2. In the new tab, most of the prompts will automatically fill in for you.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
-3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
+1. 右键点击上方 **Start course** 按钮，选择在新标签页中打开链接。
+2. 在新页面中根据系统提示新建一个仓库。
+   - 仓库名称、描述这些字段系统已经帮我们自动填充好了，您可以按需修改。
+   - 建议使用选择公开仓库，因为私有仓库有[GitHub Actions 分钟数限制](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)。
+   - 最后点击 Create repository 按钮
+3. 仓库创建完毕后，等待大约 20 秒（等待Action执行），然后刷新页面。注意是刷新您仓库的页面，不是本课程的页面。如果页面没有变化，请继续等待。然后按照 README 中的步骤一步步进行。
 
 <footer>
 
